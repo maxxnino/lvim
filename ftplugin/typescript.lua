@@ -1,5 +1,4 @@
 lvim.lang.typescript.lsp.setup.cmd = {
-    -- TODO:
     "typescript-language-server.cmd",
     "--stdio",
 }
