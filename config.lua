@@ -69,19 +69,16 @@ lvim.builtin.treesitter.incremental_selection = {
 
 lvim.builtin.dashboard.active = true
 lvim.builtin.project.active = true
+lvim.builtin.lualine.active = true
 lvim.builtin.telescope.active = true
 lvim.builtin.telescope.defaults.path_display = { shorten = 10 }
 lvim.builtin.terminal.active = true
-lvim.builtin.terminal.execs = {
-  { "lazygit", "gg", "LazyGit" },
-}
+lvim.builtin.terminal.shell = "pwsh -NoLogo"
 
 lvim.builtin.dashboard.custom_section["m"] = {
   description = { "  Marks              " },
   command = "Telescope marks",
 }
-
-lvim.builtin.compe.documentation.border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
 
 vim.g.italic_comments = true
 lvim.plugins = {
