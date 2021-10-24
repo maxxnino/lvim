@@ -28,6 +28,10 @@ M.config = function()
   vim.opt.joinspaces = false
   vim.opt.list = true
   vim.g.italic_comments = true
+  vim.g.italic_keywords = true
+  vim.g.italic_functions = true
+  vim.g.italic_keyword = true
+  vim.g.italic_function = true
 end
 
 return M

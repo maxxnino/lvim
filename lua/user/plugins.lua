@@ -2,7 +2,6 @@ local M = {}
 
 M.config = function()
   lvim.plugins = {
-    { "LunarVim/Colorschemes" },
     {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
@@ -27,8 +26,11 @@ M.config = function()
       end,
     },
     {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
+      "AckslD/nvim-neoclip.lua",
+      config = function()
+        require("user.neoclip").config()
+      end,
+      event = "BufRead",
     },
   }
 end
