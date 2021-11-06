@@ -4,6 +4,7 @@ M.config = function()
   -- Customization
   -- =========================================
   lvim.builtin.treesitter.matchup.enable = true
+  lvim.builtin.treesitter.highlight.additional_vim_regex_highlighting = false
   lvim.builtin.treesitter.context_commentstring.enable = true
   -- treesitter is buggy :(
   lvim.builtin.treesitter.indent = { enable = true, disable = { "yaml", "python" } }
@@ -29,7 +30,7 @@ M.config = function()
     "cpp",
     "cuda",
   }
-  lvim.builtin.treesitter.playground.enable = true
+  lvim.builtin.treesitter.playground.enable = false
   lvim.builtin.treesitter.incremental_selection = {
     enable = true,
     keymaps = {
@@ -75,10 +76,13 @@ M.config = function()
   lvim.builtin.project.active = true
   lvim.builtin.lualine.active = true
   lvim.builtin.telescope.active = true
-  lvim.builtin.telescope.defaults.path_display = { shorten = 10 }
+  -- lvim.builtin.telescope.defaults.path_display = { shorten = 10 }
   lvim.builtin.terminal.active = true
   lvim.builtin.terminal.shell = "pwsh -NoLogo"
   lvim.builtin.autopairs.active = true
+  lvim.builtin.dap.active = false
+  -- lvim.lsp.document_highlight = false
+  -- lvim.lsp.code_lens_refresh = false
 
   lvim.builtin.dashboard.custom_section["m"] = {
     description = { "  Marks              " },

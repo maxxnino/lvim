@@ -10,27 +10,14 @@ M.config = function()
       end,
       event = "BufRead",
     },
-    -- {
-    --   "nvim-treesitter/playground",
-    --   event = "BufRead",
-    -- },
-    -- {
-    --   "nvim-treesitter/nvim-treesitter-textobjects",
-    --   event = "BufRead",
-    -- },
     {
       "lukas-reineke/indent-blankline.nvim",
-      event = "BufRead",
-      config = function()
-        require "user.blankline"
+      setup = function()
+        vim.g.indent_blankline_char = "▏"
       end,
-    },
-    {
-      "AckslD/nvim-neoclip.lua",
       config = function()
-        require("user.neoclip").config()
+        require("user.indent_blankline").config()
       end,
-      event = "BufRead",
     },
   }
 end
